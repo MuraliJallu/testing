@@ -1,0 +1,323 @@
+MANUAL TESTING CONCEPTS
+
+  1)Why testing is required?
+   Testing is required for an effective performance of software application or product.
+   It's important to ensure that the application should not result into any failures because it can be very expensive in the future or in the later stages of the development
+  2)What types of application we test
+   We Test different type of android and ios applications and web applications.
+What is Manual testing?
+Manual Testing is a type of Software Testing where Testers manually execute test cases without using any automation tools.
+
+Manual testing is the most primitive of all testing types and helps find bugs in the software system.
+
+ Any new application must be manually tested before its testing can be automated. Manual testing requires more effort, but is necessary to check  automation feasibility.
+
+Manual Testing does not require knowledge of any testing tool.
+
+
+
+2) types of mnual Testing 
+
+   unit testing= Unit Testing is a level of software testing where individual units/ components of a software are tested. ... A unit is the smallest testable part of software
+
+  intergration testing = Integration testing, also known as integration and testing (I&T), is a software development process which program units are combined and tested as groups in multiple ways. 
+
+  system testing = System Testing is a level of the software testing where a complete and integrated software is tested. The purpose of this test is to evaluate the system's compliance with the specified requirements.
+
+
+   acceptace testing =Acceptance Testing is a level of the software testing where a system is tested for acceptability. The purpose of this test is to evaluate the system's compliance with the business requirements and assess whether it is acceptable for delivery
+
+
+Sofware Devlopment life Cycle:
+-----------------------------
+
+  in this  4 paheses 
+
+1) intail phase:  here we gathering the requiremnts from clinet 
+
+   here  we have brs document 
+
+2) ANALYSIS phase:
+
+    in this pahse   a) feasibility study 
+                    B)tentaive palnning 
+                    C)envornment selection 
+                    d)requirement analysys0
+      proof of document srs
+
+
+3)design phase:
+
+    in this software design 
+
+  here we have sofware design documnet 
+
+4)coding :
+   devolper/ programmaer   devlop a code according to requirement 
+
+5)Testing phase:
+  in This phase testers involved 
+
+6)Realese phase:
+   in this phase   project deliver to the client  and in this phave project mangers and  matiance engineer involves
+
+
+
+
+TESTING METHALODAGIES:
+
+1)WHITE BOX TESTING (OPEN BOX TESTING)
+
+   GENERALLY THIS TYPE testing is carried out by devloper 
+   
+  programming , condition loops,branches  and imlemnetation knowledge is reuired in this testing 
+
+ tester: devlopers 
+
+
+2)black box testing: closed box testing 
+
+   test the software with out knowledge of internal structure or code of the program 
+    it is functional testing or external testing 
+
+3)gray box testing:
+   testers involved in both functional or structrual part of the code 
+
+
+SDLC models 
+
+   1) sequential models 
+             Ex:  water fall model - in this model testing can be done by step by step  and if the 1st stage complted then only it can goes to the 2nd stage like water flow.
+                     adavtages:it is simple understand and good small projects
+                     disAdvantages: main drawback we can't change or modify in the middle of the project  and   songle stage of testing    
+                   
+                  v mdoel ---   V- model means Verification and Validation model
+                                Just like the waterfall model, the V-Shaped life cycle is a sequential path of execution of processes
+                                Each phase must be completed before the next phase begins 
+                               Testing of the product is planned in parallel with a corresponding phase of development in V-model.
+                     advantages : >Simple and easy to use. 
+                                 >Testing activities like planning, test designing happens well before coding this saves the time 
+                    disadvantes:>very rigid and least flexible.
+                                >If any changes happen in midway, then the test documents along with requirement documents has to be updated.
+    
+
+  2) incremental model/interavative model 
+             Ex: prototype model :The Prototyping Model is a systems development method (SDM) in which a prototype (an early approximation of a final system or product) is built, tested
+                                  hen reworked as necessary until an acceptable prototype is finally achieved from which the complete system or product can now be developed.
+                     adavantes: save time and cost  
+                                imoroved and increased user enovernmnet 
+
+                     dis advatges: insuficient analysis 
+                                   user get confused of prototype and finishing system 
+                 spiral model :The spiral model is a risk-driven process model generator for software projects. Based on the unique risk patterns of a given project
+                                the spiral model guides a team to adopt elements of one or more process models, such as incremental, waterfall, or evolutionary prototyping.
+                       adavatgs:High amount of risk analysis hence, avoidance of Risk is enhanced.
+                                 Good for large and mission-critical projects.
+                                 Additional Functionality can be added at a later date.
+                       disadvtgs:Can be a costly model to use.
+                                  Risk analysis requires highly specific expertise.
+                                  Doesn’t work well for smaller projects.
+
+
+                 agile model  : Agile software development refers to a group of software development methodologies based on iterative development, where requirements and solutions
+                                 evolve through collaboration between self-organizing cross-functional teams. 
+
+                         adavtgs:Customer satisfaction by rapid, continuous delivery of useful software
+                                  Regular adaptation to changing circumstances.
+                                   Even late changes in requirements are welcomed
+                       di advatgs:In case of some software deliverables, especially the large ones, 
+                                    it is difficult to assess the effort required at the beginning of the software development life cycle.
+                                    There is lack of emphasis on necessary designing and documentation.
+
+
+  
+
+Testing Types :
+       
+   functional Testing :Functional testing is a software testing process used within software development in which software is tested to ensure that it conforms with all requirements.
+                       Functional testing is a way of checking software to ensure that it has all the required functionality that's specified within its functional requirements.
+
+    non functional testing:Non-functional testing is the testing of a software application or system for its non-functional requirements: 
+                           the way a system operates, rather than specific behaviours of that system. ... 
+                           For example, software performance is a broad term that includes many specific requirements like reliability and scalability.       
+                     
+                 it conentrates on   perofarmence tesing   
+                                     a)Load tesing : measuring the syatsem behaviour on customer expected load
+                                     b)stress Testing: more than the expected load 
+                                     c)spike testing: under suddenly chages the means increase or decrease suddenly 
+                                     d)endurance testing: at time number of users continously more than 8 or 10 hours  it means  continous operation 
+
+
+
+     usabality testing:Usability testing refers to evaluating a product or service by testing it with representative users. 
+                       testing can done user friendly
+      
+    regression tesing : Regression testing is a type of software testing which verifies that software, which was previously developed and tested
+                           still performs correctly after it was changed or interfaced with other software
+
+    re testing: Retesting is done to make sure that bug is fixed and failed functionality is working fine or not,
+
+    smoke testing :Smoke Testing, also known as “Build Verification Testing  
+                   type of software testing that comprises of a non-exhaustive set of tests that aim at ensuring that the most important functions work
+                   The results of this testing is used to decide if a build is stable enough to proceed with further testing.
+
+   Adhoc Testing:Ad hoc testing is a commonly used term for software testing performed without planning and documentation
+                 but can be applied to early scientific experimental studies.
+                 The tests are intended to be run only once, unless a defect is discovered. Ad hoc testing is the least formal test method.
+
+
+
+STLC (software testing life cycle ):
+                              Software Testing Life Cycle (STLC) is the testing process which is executed in systematic and planned manner. 
+                              In STLC process, different activities are carried out to improve the quality of the product. Test Execution.
+
+
+ Test Planning;
+    This phase is also called Test Strategy phase. Typically , in this stage, a Senior QA manager will determine effort and cost estimates for the project and would prepare and finalize the Test Plan. Activities
+
+Preparation of test plan/strategy document for various types of testing
+Test tool selection 
+Test effort estimation 
+Resource planning and determining roles and responsibilities.
+Training requirement
+Deliverables 
+Test plan /strategy document.
+
+Test Case Development:
+This phase involves creation, verification and rework of test cases & test scripts. Test data , is identified/created and is reviewed and then reworked as well.
+
+Activities
+Create test cases, automation scripts (if applicable)
+Review and baseline test cases and scripts 
+Create test data (If Test Environment is available)
+Deliverables 
+Test cases/scripts 
+Test data
+
+Effort estimation document.
+
+Test Environment Setup:
+Test environment decides the software and hardware conditions under which a work product is tested. Test environment set-up is one of the critical aspects of testing process and can be done in parallel with Test Case Development Stage. Test team may not be involved in this activity if the customer/development team provides the test environment in which case the test team is required to do a readiness check (smoke testing) of the given environment. Activities 
+
+Understand the required architecture, environment set-up and prepare hardware and software requirement list for the Test Environment. 
+Setup test Environment and test data 
+Perform smoke test on the build
+Deliverables 
+Environment ready with test data set up 
+Smoke Test Results.
+
+
+Test Execution
+ During this phase test team will carry out the testing based on the test plans and the test cases prepared. Bugs will be reported back to the development team for correction and retesting will be performed. Activities 
+
+Execute tests as per plan
+Document test results, and log defects for failed cases 
+Map defects to test cases in RTM 
+Retest the defect fixes 
+Track the defects to closure
+Deliverables 
+Completed RTM with execution status 
+Test cases updated with results 
+Defect reports
+
+Test Cycle Closure
+Testing team will meet , discuss and analyze testing artifacts to identify strategies that have to be implemented in future, taking lessons from the current test cycle. The idea is to remove the process bottlenecks for future test cycles and share best practices for any similar projects in future. Activities
+
+Evaluate cycle completion criteria based on Time,Test coverage,Cost,Software,Critical Business Objectives , Quality
+Prepare test metrics based on the above parameters. 
+Document the learning out of the project 
+Prepare Test closure report 
+Qualitative and quantitative reporting of quality of the work product to the customer. 
+Test result analysis to find out the defect distribution by type and severity.
+Deliverables 
+Test Closure report 
+Test metrics
+
+
+
+
+TEST Cases:
+
+Write a test case to vaidate inbox email functionality
+    1)Check whether newly received email is displayed as a Pop up in the Inbox section.
+    2)Check that a newly received email has correctly displayed sender emailId or name, mail subject and mail body(trimmed to single line).
+    3)Check that on clicking the newly received email, it is navigated to email content.
+    4)Check that the received email contents are correctly displayed with the desired source formatting.
+    5)Check if any attachments are attached to the email and is downloadable.
+    6)Check that the attachments are scanned for viruses before download.
+    7)Check if all the emails marked as read are not highlighted.
+    8)Check that all the emails read as well as unread have a mail read time appended at the end on the email list displayed in the inbox section.
+    9)Check the count of unread emails is displayed alongside 'Inbox' text in left sidebar of GMail.
+    10)Check whether the unread email count increases by one on receiving a new email.
+    11)Check that unread email count decreases by one on reading an email ( marking email as read).
+    12)Check that email recipients in cc are visible to all user.
+    13)Check that email recipients in bcc are not visible to user.
+    14)Check all received emails get piled up in the 'Inbox' section and gets deleted in cyclic fashion based on the size availability.
+    15)Check that email can be received from non-gmail emailIds like - yahoo, hotmail etc.
+
+write a test case to validate how atm machine works?
+    1)Check the option when u insert a card
+    2)Check the option when u insert a card in right angle
+    3)Check the option when u insert a card in wrong angle
+    4)check the language selection
+    5)check if it is displaying the selected language or not?
+    6)check if is showing enter pin number 
+    7)check the operation if you entered right pin num
+    8)check the operation if you entered wrong pin num
+    9)check the pin num is in encrypted form or not
+    10)click on enter option check whether it is giving selected option or not
+    11)verify the options
+    12)check the operation amount to be entered
+    13)check if money is drawing from the selected account or not
+    14)check if correct amount is coming out or not
+    15)check the operation if you draw money grater than the balance
+    16)check the operation if you draw money greater than the day limit
+    17)check the operation when the machine dont have money
+    18)check the operation when the machine have some problems
+
+OOPS Concepts:
+
+   Object means a real word entity such as pen, chair, table etc. Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. It simplifies the software development and maintenance by providing some concepts:
+
+Object
+Class
+Inheritance
+Polymorphism
+Abstraction
+Encapsulation
+
+OBJECt:
+
+Any entity that has state and behavior is known as an object. For example: chair, pen, table, keyboard, bike etc. It can be physical and logical.
+
+Class:
+
+Collection of objects is called class. It is a logical entity.
+
+Inheritance:
+
+When one object acquires all the properties and behaviours of parent object i.e. known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+
+
+
+Polymorphism:
+
+When one task is performed by different ways i.e. known as polymorphism. For example: to convince the customer differently, to draw something e.g. shape or rectangle etc.
+
+In java, we use method overloading and method overriding to achieve polymorphism.
+
+Another example can be to speak something e.g. cat speaks meaw, dog barks woof etc.
+
+Abstraction:
+
+Hiding internal details and showing functionality is known as abstraction. For example: phone call, we don't know the internal processing.
+
+In java, we use abstract class and interface to achieve abstraction
+
+Encapsulation:
+
+Binding (or wrapping) code and data together into a single unit is known as encapsulation. For example: capsule, it is wrapped with different medicines.
+
+A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+
+ 
