@@ -1,0 +1,30 @@
+package Murali.javaBasics;
+import java.util.Scanner;
+public class Addition {
+	int a=10;
+	public static void main(String [] args){
+		
+	/*int a=1,b=1;
+		int c;
+		c=a+b;
+		System.out.println("Sum of numbers:"+c);*/
+		Scanner sc = new Scanner(System.in);
+		int a,b,c,d;
+		System.out.println("Enter first number");
+		  a=sc.nextInt() ;
+		  System.out.println("Enter second number");
+		  b=sc.nextInt() ;
+		c=a+b;
+		 System.out.println("sum of two number:"+ c);
+		 Apple apple= new Apple();
+		 apple.message();
+		d=apple.sum(10,20);
+		 System.out.println("sum of two number fron apple:"+ d);
+		message();
+	}
+	public static 
+	void message(){
+		System.out.println("I am in main method");
+	}
+
+}
