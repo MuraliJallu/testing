@@ -1,0 +1,244 @@
+1) why testing is required 
+ testing is reuired for effective performace of software appilication or product 
+
+2)what type of appilications we test 
+      We Test different type of android and ios applications and web applications.
+
+3)what is SDLC and different phases in SDLC?
+   SDLC is sofware devlopment life cycle it is series of steps, or phases, that provide a model for the development and lifecycle management of an application 
+
+  phases: Requirement gathering and analysis.
+          Design.
+          Implementation or coding.
+          Testing.
+          Deployment-- software system avilable to use 
+          Maintenance.
+
+4)what is waterfalmethod
+
+  The waterfall model is a sequential (non-iterative) design process, used in software development processes, 
+  in which progress is seen as flowing steadily downwards (like a waterfall) through the phases of conception
+
+ advantages:it is simple understand and good small projects
+ disAdvantages: main drawback we can't change or modify in the middle of the project  and   single stage of
+
+5)what is agile methadology 
+
+             it is came up in 1986   Agile means  quick moving 
+
+           Client don't know clear requirments 
+           client wants change his requiremnt frequently and if they want project very quickly 
+           if he wants new techonlogy and new type of project (if they only use old project tools like QTP)
+ 
+            main Disadvantage is  deviation from test plan     (to over come that they introduce scrum )
+  
+   it is the methadology  based on iterative devlopment
+ AGILE methodology is a practice that promotes continuous iteration of development and testing throughout the software development lifecycle of the project
+
+        agile methadalogy  only good for end user they don"t know what they want 
+
+         SPRINT== means it simply Time box for example they completed project in 1 week to 4 weeks something like that 
+         SCRUm==  means it is collection of people get together in practicular sprint
+                  it is collections of sprints 
+
+
+
+
+6) what scrum methadalogy
+  
+   Scrum is a subset of Agile. It is a lightweight process framework for agile development, 
+   Scrum is an iterative and incremental way of developing software.
+ 
+
+
+
+
+
+7) product backlog item  (product of all user storys)
+  
+   list of features and specifications priortize the product owner in the sequence of businnes reuirements 
+    It is a collection of user stories captured for a scrum product. The product owner prepares and maintains the product backlog
+
+8) what is user story 
+  
+  the user story describes the type of user,what they want  and why ,unit of work should complete in one sprint 
+
+9) what sprint planning 
+  
+        Sprint planning is a collaborative effort involving a ScrumMaster, who facilitates the meeting,
+
+                                                            a Product Owner, who clarifies the details of the product backlog items
+                                                            their respective acceptance criteria, and 
+                                                                 the Entire Agile Team, who define the work and effort necessary to meet their sprint commitment.
+
+
+   in simple half day with  end users we can go to the story, we can take them from list of backlogs, and we can get to the priortize
+   what the functionality and requiremnts they want in practicular sprint  , on  2nd we can bring your scrum which of the items in backlog actually delivered in your sprint 
+
+
+
+
+10) what is sprint review meeting
+
+      in Scrum, each sprint is required to deliver a potentially shippable product increment
+               This means that at the end of each sprint, the team has produced a coded, tested and usable piece of software
+
+    During this meeting the Scrum Team shows which Scrum Product Backlog items they completed (according to the Definition of Done) during the sprint
+          So at the end of each sprint, a sprint review meeting is held.
+
+in simple scrum meeting will held evryday of morning, they goint to talk about what they did yesterday,then they talk about what they doing today,they talk about what are going todo tommorw
+
+
+
+11)what is sprint retrospective
+
+        The sprint retrospective is a meeting facilitated by the ScrumMaster at which the team discusses the just-concluded sprint 
+           and determines what could be changed that might make the next sprint more productive
+    
+   
+12)what is sprint grooming  (product backlog refinement)
+
+   to keeping the backlog clean and orderly—is a meeting that is held near the end of one sprint to ensure the backlog is ready for the next sprint.
+
+
+13)what is burndown chart and velocity
+     
+    A burn down chart is a graphical representation of work left to do versus time
+                   It is useful for predicting when all of the work will be completed.
+
+    The rate of progress of a Scrum Team is called "velocity"
+   
+
+
+14)what is user acceptance criteria test cases
+
+   In software testing the ISTQB defines acceptance as: formal testing with respect to user needs, requirements,
+     and business processes conducted to determine whether a system satisfies the acceptance criteria
+      and to enable the user, customers or other authorized entity to determine whether or not to accept the system.
+
+  EX: A certain feature – let’s say, your in-app search feature – has some performance issues, and the loading time of the results page is pretty bad
+     Technically, it works. Every tester can use it – but because of the bad performance no one will want to. 
+    Functional tests would go well, usability tests would go fine as well, but the performance problems would probably lead to a failed acceptance test.
+
+15)  what is V- model
+
+    The V - model is SDLC model where execution of processes happens in a sequential manner in V-shape
+
+    It is also known as Verification and Validation model. V - Model is an extension of the waterfall model 
+     based on association of a testing phase for each corresponding development stage.
+
+16) what is STLC 
+   
+    Software Testing Life Cycle (STLC) is the testing process which is executed in systematic and planned manner
+    In STLC process, different activities are carried out to improve the quality of the product.
+  
+   
+    reuiremnts analasys==>Test planning ===> test case devlopment===>envornment setup===> test excution=====>test cycle clouser
+
+17)what is defect 
+   
+    A defect is an error or a bug, in the application which is created
+   A programmer while designing and building the software can make mistakes or error. 
+    These mistakes or errors mean that there are flaws in the software. These are called defects.
+
+18)
+
+19)defect life cycle
+                                                      
+                           duplicate rejected deffred not a bug
+                           
+
+    new------->assigned----->open---->fixed----->pending retest------->retest--------->verified------->closed
+
+                                                                       re-opend
+
+
+
+20) what is unit testing 
+
+    Unit Testing is a level of software testing where individual units/ components of a software are tested. 
+
+
+21)when do we use regression testing 
+  
+    verifies that software previously developed and tested still performs correctly even after it was changed or interfaced with other software
+
+     to determine what areas could be affected by the proposed change
+
+regression testing means it to find if unwanted defects have been created in the changed system.
+
+ Regression Testing can done all the levels like unit testing, integration testing and systam testing 
+
+
+22)what is integration testing 
+  
+    which individual software modules are combined and tested as a group
+
+23)when do we use integration testing 
+
+   when higher level modules are tested first 
+
+
+
+24)when do we use smoke testing and sanity testing?
+
+     Smoke Testing is a kind of Software Testing performed after software build to  find out the critical
+     functionalities of the program is working fine
+
+     Sanity testing is a kind of Software Testing performed after receiving a software build, with minor changes in    
+     code, or functionality to find that the bugs have been fixed and no further issues are introduced due to these changes.
+     
+
+25)  What is UAT?
+ 
+   User Acceptance Testing actual software users test the software to make sure it can handle required tasks in 
+    real-world scenarios, according to specifications
+
+
+26) what is Alpha and beta testing 
+  
+   Alpha testing:  Alpha testing is a type of acceptance testing; performed to identify all possible issues/bugs before releasing the 
+                   product to everyday users or public
+   
+   Beta Testing:   Beta Testing of a product is performed by "real users" of the software application in a "real environment" and 
+                   can be considered as a form of external user acceptance testing.
+
+                   Beta version of the software is released to a limited number of end-users of the product to obtain feedback on the product quality
+                   Beta testing reduces product failure risks and provides increased quality of the product through customer validation.
+
+27)when do we use white box testing and block box testing?
+
+          white Box Testing: it can test the internal code,infrastructure  and functionality of the software 
+                             in simple  they know about internal part of sofwtare 
+                 Ex: programmers involved on this testing 
+
+
+          Black box Testing : this can done by the with knowing the internal part of the software like code or functionality or infrastructure
+                             in this they know structural part of the software
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
