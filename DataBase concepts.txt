@@ -1,0 +1,567 @@
+1)what is database
+  
+ A database is a collection of information that is organized so that it can be easily accessed, managed and updated
+
+2) whatis table
+
+    Table is a set of data elements (values) using a model of vertical columns (identifiable by name) and horizontal rows,
+
+    A table is an arrangement of data in rows and columns
+
+
+3)what is column
+
+   vertical series of cells in chart or table
+
+4)what is row
+
+  horizantal series of cells in chart or tables
+
+
+5) Example of INNERJOIN 
+
+  The INNER JOIN creates a new result table by combining column values of two tables
+   (table1 and table2) based upon the join-predicate
+
+  The basic syntax of INNER JOIN is as follows:
+    
+                                     SELECT table1.column1, table2.column2...
+                                         FROM table1
+                                         INNER JOIN table2
+                                      ON table1.common_field = table2.common_field;
+
+ Ex: Consider the following two tables, (a) CUSTOMERS table is as follows:
+   
+    table 1:0      ID                 NAME                AGE           ADDRESS              SALARY
+
+                    1              karthik                22              vizag                10000
+                    2              murali                 25              rajam                40000
+                    3              ravi			  30              palavalasa           20000
+                    4              kumar		  32		  palakonada           60000
+                    5              baburao                22              srikakluam           80000
+                    6              karthik                25              vojayawada           90000
+                    7              kranthi	          30              nampalli             30000
+                    8              harsha		  32		  hyderabad            25000
+
+  Table 2: 
+                    OID             DATE                       CUSTOMER ID                     AMOUNT
+
+                    101           2009-10-08 00:00:00               2                            10000
+                    100           2009-10-08 00:00:00               2                            40000
+                    102           2009-11-20 00:00:00	            5                            20000
+                    103           2008-05-20 00:00:00	            6                            20000
+
+
+  Now, let us join these two tables using INNER JOIN as follows:
+
+     SQL> SELECT  ID, NAME, AMOUNT, DATE
+     FROM CUSTOMERS
+     INNER JOIN ORDERS
+     ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+
+
+  Result Table:
+                    OID           NAME                             DATE                                AMOUNT
+
+                     2         murali                              2009-10-08 00:00:00                   10000
+                     2         murali                              2009-10-08 00:00:00                   40000
+                     5         baburao                             2009-11-20 00:00:00	                 20000
+                     7         kranthi                             2008-05-20 00:00:00	                 20000
+
+
+
+
+
+6) Example of LEFT OUTER JOIN
+
+             The LEFT JOIN keyword returns all rows from the left table (table1), with the matching rows in the right table (table2). 
+             The result is NULL in the right side when there is no match.
+                   
+
+   Example:    table 1 - doctors
+                                     doctor_id   doctor_name          degree
+                                     ----------  --------------       ----------
+                                      210         Dr. John Linga       MD
+                                      211         Dr. Peter Hall       MBBS
+                                      212         Dr. Ke Gee           MD
+                                      213         Dr. Pat Fay          MD
+
+
+
+              table - visits
+                                     doctor_id     patient_name      vdate
+                                      ----------  ------------       ----------
+                                       210         Julia Nayer       2013-10-15
+                                       214         TJ Olson          2013-10-14
+                                       215         John Seo          2013-10-15
+                                       212         James Marlow      2013-10-16
+                                       212         Jason Mallin      2013-10-12
+
+  
+   SQL  code :
+                         SELECT a.doctor_id,a.doctor_name,  
+                                c.patient_name,c.vdate  
+                             FROM doctors a   
+                            LEFT JOIN visits c  
+                          ON a.doctor_id=c.doctor_id; 
+
+
+resulted output:
+
+                                 doctor_id            doctor_name           patient_name  vdate
+                                 ----------           --------------        ------------  ----------
+                                  210                  Dr. John Linga       Julia Nayer   2013-10-15
+                                  211                  Dr. Peter Hall
+                                  212                  Dr. Ke Gee           James Marlow  2013-10-16
+                                  212                  Dr. Ke Gee           Jason Mallin  2013-10-12
+                                  213                  Dr. Pat Fay
+
+
+
+7) Example of outer join
+
+    The RIGHT JOIN keyword returns all records from the right table (table2), and the matched records from the left table (table1). 
+    The result is NULL from the left side, when there is no match.
+
+
+ syntax:              SELECT column_name(s)
+                        FROM table1
+                     RIGHT JOIN table2 ON table1.column_name = table2.column_name;
+
+
+
+table-1
+
+   OrderID	CustomerID	EmployeeID	OrderDate	ShipperID
+   10308	      2	             7	         1996-09-18	   3
+   10309	     37	             3	         1996-09-19	   1
+   10310	     77	             8	         1996-09-20	   2
+
+ table-2:
+
+  EmployeeID	LastName	FirstName	        BirthDate	Photo
+     1	        Davolio	         Nancy	                12/8/1968	EmpID1.pic
+     2	        Fuller	         Andrew	               2/19/1952	EmpID2.pic
+     3	        Leverling	 Janet	               8/30/1963	EmpID3.pic
+
+
+resulted output:  
+
+ OrderID	 LastName	FirstName
+ 	           West 	Adam 
+10248 	          Buchanan 	Steven 
+10249 	          Suyama 	Michael 
+10250 	          Peacock 	Margaret 
+10251 	          Leverling 	Janet 
+10252 	         Peacock 	Margaret 
+10253 	         Leverling 	Janet 
+10254 	        Buchanan 	Steven 
+
+4)Example of MAX,SUM,AVG  
+     
+
+     these are agregession functions 
+   
+
+   SUM FUNCTION: SQL SUM function is used to find out the sum of a field in various records.
+    
+     syntax:     SELECT SUM(aggregate_expression)
+                       FROM table
+                      [WHERE conditions];
+
+    Example: slect * from employee table
+
+                        id   | name    | work_date  | daily_typing_pages |
+                      -----------------------------------------------
+                      |    1 | murali  | 2007-01-24 |                250 
+                      |    2 | Ravi    | 2007-05-27 |                220 
+                      |    3 | Kumar   | 2007-05-06 |                170 
+                      |    3 | Karthik | 2007-04-06 |                100 
+                      |    4 | satish  | 2007-04-06 |                220 
+                      |    5 | shilpa  | 2007-06-06 |                300 
+                      |    5 | venky   | 2007-02-06 |                350
+
+    SQL code:     
+                    SELECT SUM(daily_typing_pages)  FROM employee table;
+
+       result will   ---  1610
+
+
+
+   
+
+    MAX FUNCTION: SQL MAX function is used to find out the record with maximum value among a record set
+
+
+        max function Syntax: select MAX(agression function)  
+                                FROM tables
+                                  [WHERE conditions];
+
+
+        Eample:         id   | name    | work_date  | daily_typing_pages
+                      -----------------------------------------------
+                      |    1 | murali  | 2007-01-24 |       250 
+                      |    2 | Ravi    | 2007-05-27 |       220 
+                      |    3 | Kumar   | 2007-05-06 |       170 
+                      |    3 | Karthik | 2007-04-06 |       100 
+                      |    4 | satish  | 2007-04-06 |       220 
+                      |    5 | shilpa  | 2007-06-06 |       300 
+                      |    5 | venky   | 2007-02-06 |       350 
+
+  SQL query:  SELECT MAX(daily_typing_pages)
+
+                          FROM employee_table;
+    \
+      output will --- 350   
+
+
+    and MIN function also smiliar to like above example
+
+
+
+   AVG FUNCTION:  SQL AVG function is used to find out the average of a field in various records  
+
+         AVG function  Syntax:  select AVG(agression function)  
+                                FROM tables
+                                  [WHERE conditions];
+
+     Example :   
+                    id   | name    | work_date  | daily_typing_pages
+                      -----------------------------------------------
+                      |    1 | murali  | 2007-01-24 |       250 
+                      |    2 | Ravi    | 2007-05-27 |       220 
+                      |    3 | Kumar   | 2007-05-06 |       170 
+                      |    3 | Karthik | 2007-04-06 |       100 
+                      |    4 | satish  | 2007-04-06 |       220 
+                      |    5 | shilpa  | 2007-06-06 |       300 
+                      |    5 | venky   | 2007-02-06 |       350 
+
+
+
+SQL Query:     SELECT AVG(daily_typing_pages)
+
+                          FROM employee_table;
+
+
+  ouput will be ----  230
+
+
+
+9) Example of GROUP BY function 
+
+
+     The SQL GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups.
+
+
+   Example:
+                Consider the CUSTOMERS table is having the following records:
+
+                                        +----+----------+-----+-----------+----------+
+                                        | ID | NAME     | AGE | ADDRESS   | SALARY   |
+                                        +----+----------+-----+-----------+----------+
+                                        |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+                                        |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+                                        |  3 | kaushik  |  23 | Kota      |  2000.00 |
+                                        |  4 | Chaitali |  25 | Mumbai    |  6500.00 |
+                                        |  5 | Hardik   |  27 | Bhopal    |  8500.00 |
+                                        |  6 | Komal    |  22 | MP        |  4500.00 |
+                                        |  7 | Muffy    |  24 | Indore    | 10000.00 |
+     
+If you want to know the total amount of salary on each customer, then GROUP BY query would be as follows:
+
+SQL CODE:          SELECT NAME, SUM(SALARY) FROM CUSTOMERS
+                               GROUP BY NAME;
+
+
+This would produce the following result:
+
+
+                                                     | NAME     | SUM(SALARY) |
+                                                     +----------+-------------+
+                                                     | Chaitali |     6500.00 |
+                                                     | Hardik   |     8500.00 |
+                                                     | kaushik  |     2000.00 |
+                                                     | Khilan   |     1500.00 |
+                                                     | Komal    |     4500.00 |
+                                                     | Muffy    |    10000.00 |
+                                                     | Ramesh   |     2000.00 |
+
+     for example custmers have duplicate names like below example 
+
+
+                                        | ID | NAME     | AGE | ADDRESS   | SALARY   |
+
+                                        |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+                                        |  2 | Ramesh   |  25 | Delhi     |  1500.00 |
+                                        |  3 | kaushik  |  23 | Kota      |  2000.00 |
+                                        |  4 | kaushik  |  25 | Mumbai    |  6500.00 |
+                                        |  5 | Hardik   |  27 | Bhopal    |  8500.00 |
+                                        |  6 | Komal    |  22 | MP        |  4500.00 |
+                                        |  7 | Muffy    |  24 | Indore    | 10000.00 |
+
+
+
+ when using  BY GROUP Function  resulted out put will be 
+                                           
+                                        | NAME    | SUM(SALARY) |
+
+                                        | Hardik  |     8500.00 |
+                                        | kaushik |     8500.00 |
+                                        | Komal   |     4500.00 |
+                                        | Muffy   |    10000.00 |
+                                        | Ramesh  |     3500.00 |
+
+
+
+
+
+10)  Example of HAVING  function 
+
+           A HAVING clause in SQL specifies that an SQL SELECT statement should only return rows where aggregate values meet the specified conditions
+
+           It was added to the SQL language because the WHERE keyword could not be used with aggregate functions.
+
+
+  SYNTAX:                SELECT column1, column2
+                             FROM table1, table2
+                           WHERE [ conditions ]
+                          GROUP BY column1, column2
+                         HAVING [ conditions ]
+                           ORDER BY column1, column2
+
+
+    Example:   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+
+               |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+               |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+               |  3 | kaushik  |  23 | Kota      |  2000.00 |
+               |  4 | Chaitali |  25 | Mumbai    |  6500.00 |
+               |  5 | Hardik   |  27 | Bhopal    |  8500.00 |
+               |  6 | Komal    |  22 | MP        |  4500.00 |
+               |  7 | Muffy    |  24 | Indore    | 10000.00 |
+
+
+SQL code:            SELECT ID, NAME, AGE, ADDRESS, SALARY
+                              FROM CUSTOMERS
+                              GROUP BY age
+                           HAVING COUNT(age) >= 2;
+
+
+                        This would produce the following result:
+
+
+                          | ID | NAME   | AGE | ADDRESS | SALARY  |
+
+                          |  2 | Khilan |  25 | Delhi   | 1500.00 |
+
+
+
+
+
+
+
+
+11)  Example of  WHERE Condition 
+
+
+         The SQL WHERE clause is used to specify a condition while fetching the data from single table or joining with multiple tables
+
+
+    Syntax:      SELECT column1, column2, columnN 
+                         FROM table_name
+                         WHERE [condition]
+
+
+
+      Example:   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+
+               |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+               |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+               |  3 | kaushik  |  23 | Kota      |  2000.00 |
+               |  4 | Chaitali |  25 | Mumbai    |  6500.00 |
+               |  5 | Hardik   |  27 | Bhopal    |  8500.00 |
+               |  6 | Komal    |  22 | MP        |  4500.00 |
+               |  7 | Muffy    |  24 | Indore    | 10000.00 |
+
+
+
+SQL CODE :      SQL> SELECT ID, NAME, SALARY 
+                      FROM CUSTOMERS
+                     WHERE SALARY > 2000;
+ 
+
+
+       result ouput:    | ID | NAME     | SALARY   |
+                        +----+----------+----------+
+                        |  4 | Chaitali |  6500.00 |
+                        |  5 | Hardik   |  8500.00 |
+                        |  6 | Komal    |  4500.00 |
+                        |  7 | Muffy    | 10000.00 |
+
+
+  for   suppose :        SQL> SELECT ID, NAME, SALARY 
+                                FROM CUSTOMERS
+                              WHERE SALARY > 2000;
+
+
+
+output will be :
+                     | ID | NAME     | SALARY   |
+                     +----+----------+----------+
+                     |  4 | Chaitali |  6500.00 |
+                     |  5 | Hardik   |  8500.00 |
+                     |  6 | Komal    |  4500.00 |
+                     |  7 | Muffy    | 10000.00 
+
+
+
+
+12)  Example of PRIMARY KEY 
+
+        A primary key is a column (or columns) in a table that uniquely identifies the rows in that table
+     
+         It is a unique identifier, such as a driver license number, telephone number (including area code), or vehicle identification number (VIN).
+
+
+
+
+13)  what is stored procedure, user defined functions
+
+
+     User defined functions:  User defined function is a database object which encapsulates one or more sql statements for reuse , 
+                              which can accept zero or more parameters and return either a value or table
+
+                        simple It discusses how (and why) to create them and when to use them
+
+
+          stored procedure: A stored procedure is a group of SQL statements that form a logical unit and perform a particular task, 
+                             and they are used to encapsulate a set of operations or queries to execute on a database server
+
+
+
+
+14)    what is index and how it will improve performance
+   
+       index is an alphabetical list of names, subjects or  measure of something
+
+             An index is used to speed up the performance of queries 
+
+
+15)what is ETL testing 
+
+
+     ETL is short for extract, transform, load, three database functions that are combined into one tool to pull data out of one database and place it into another database. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Extract is the process of reading data from a database.
+--------------------------------------------------------------
+
+     ETL stands for Extract-Transform-Load and it is a process of how data is loaded from the source system to the data warehouse
+
+    Data is extracted from an OLTP database, transformed to match the data warehouse schema and loaded into the data 
+
+     roles:   Extracting the data
+              transforming the data
+              loading the data in to data warehouse 
+
+
+
+16)   what is   FORIEGN KEY 
+
+                 A foreign key is a key used to link two tables together. This is sometimes called a referencing key.
+
+              The relationship between 2 tables matches the Primary Key in one of the tables with a Foreign Key in the second table.
+
+
+ EX;USTOMERS table:
+
+CREATE TABLE CUSTOMERS(
+       ID   INT              NOT NULL,
+       NAME VARCHAR (20)     NOT NULL,
+       AGE  INT              NOT NULL,
+       ADDRESS  CHAR (25) ,
+       SALARY   DECIMAL (18, 2),       
+       PRIMARY KEY (ID)
+);
+ORDERS table:
+
+CREATE TABLE ORDERS (
+       ID          INT        NOT NULL,
+       DATE        DATETIME, 
+       CUSTOMER_ID INT references CUSTOMERS(ID),
+       AMOUNT     double,
+       PRIMARY KEY (ID)
+);
+
+
+
+use the syntax for specifying a foreign key by altering a table.
+
+                             ALTER TABLE ORDERS 
+                           ADD FOREIGN KEY (Customer_ID) REFERENCES CUSTOMERS (ID);
+
+
+
+
+17)Finding second highest salary from employee table
+
+                  In this solution, we have first sorted all salaries form Employee table in decreasing order, 
+                  so that 2 highest salaries come at top of the result set. After that we took just two records by using LIMIT 2.
+
+
+
+
+
+      
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
